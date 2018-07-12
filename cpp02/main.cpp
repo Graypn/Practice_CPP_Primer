@@ -14,11 +14,13 @@ int main(int argc, const char * argv[]) {
     
     unsigned u = 10;
     int i = -42;
-    
+
     /**
      * 1. 数值转换
      * 无符号的和有符号的进行算数运算，会把有符号的转换成无符号的，再进行运算
      */
+    cout << "--------- 1. 数值转换 ----------" << endl;
+
     cout << i + i << endl;
     cout << u + i << endl;
     
@@ -28,6 +30,8 @@ int main(int argc, const char * argv[]) {
      * 定义引用的时候必须进行初始化，因为引用是和一个变量进行绑定
      * 引用本身不是一个对象，所以不能定义引用的引用
      */
+    cout << "--------- 2. 引用 ----------" << endl;
+
     int ii = 2;
     int &refi = ii;
     int ii1 = refi;
@@ -40,6 +44,8 @@ int main(int argc, const char * argv[]) {
      * 指针是一个对象，允许对指针进行赋值和拷贝
      * 定义指针的时候无需赋初值
      */
+    cout << "--------- 3. 指针 ----------" << endl;
+
     double dval;
     double *pd = &dval;
     double *pd1 = pd;
@@ -77,6 +83,8 @@ int main(int argc, const char * argv[]) {
      * 4. const
      * 常量声明，不允许修改
      */
+    cout << "--------- 4. const ----------" << endl;
+
     const int ci = 1024;
     
     // 默认范围在当前文件，如果其他文件需要共享使用，需要加上 extern
@@ -113,6 +121,8 @@ int main(int argc, const char * argv[]) {
      * 5. auto
      * 会根据变量类型自动推断声明类型
      */
+    cout << "--------- 5. auto ----------" << endl;
+
     auto i21 = 121;
     cout << i21 << endl;
     
